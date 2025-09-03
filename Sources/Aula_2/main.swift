@@ -116,6 +116,10 @@ l2.exibirDetalhes()
 
 */
 
+/** ------------------------------------------------------------------------------
+
+PROBLEMA 2
+
 enum EstacaoDoAno {
     case Verao
     case Inverno
@@ -131,17 +135,17 @@ class Calendario {
         self.para = para
     }
     
-    func getMensagem(para: EstacaoDoAno) ->String {
+    static func getMensagem(para: EstacaoDoAno) ->String {
         
         switch para{
             
-            case Verao:
+            case .Verao:
             return "Dias ensolarados e calorosos, ótimos para ir à praia."
-            case Inverno:
+            case .Inverno:
             return "BRRRRRRRRRRR!!! Friozin da peste!!"
-            case Outono:
+            case .Outono:
             return "Qual o proposito da folha se não o de cair"
-            case Primavera:
+            case .Primavera:
             return "Quero que sejas minha frorr"
         }
         
@@ -149,4 +153,13 @@ class Calendario {
     
 }
 
-let m1 = Calendario.getMensagem(para: .Verao)
+var m1 = Calendario.getMensagem(para: .Verao)
+print(m1)
+m1 = Calendario.getMensagem(para: .Inverno)
+print(m1)
+m1 = Calendario.getMensagem(para: .Outono)
+print(m1)
+m1 = Calendario.getMensagem(para: .Primavera)
+print(m1)
+
+*/

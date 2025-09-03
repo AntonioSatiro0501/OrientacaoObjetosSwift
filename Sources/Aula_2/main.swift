@@ -163,3 +163,39 @@ m1 = Calendario.getMensagem(para: .Primavera)
 print(m1)
 
 */
+
+/** ------------------------------------------------------------------------------
+
+PROBLEMA 3
+
+enum StatusPedido {
+    case entregue
+    case recebido
+    case processando
+    case enviado
+}
+
+class Pedido {
+
+    let id: Int
+    let descricao: String
+    var status: StatusPedido
+
+    init(id: Int, descricao: String, status: StatusPedido){
+        self.id = id
+        self.descricao = descricao
+        self.status = status
+    }
+
+    func atualizarStatus(novoStatus: StatusPedido){
+
+        status = novoStatus
+    }
+
+}
+
+let meuPedido = Pedido(id: 101, descricao: "Headset", status: .enviado)
+meuPedido.atualizarStatus(novoStatus: .recebido)
+print(meuPedido.status)
+
+*/
